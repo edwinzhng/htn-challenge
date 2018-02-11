@@ -1,0 +1,9 @@
+.countdown {
+  text-align: center;
+}
+
+.row-of-3 {
+  width: 100px;
+  display: inline;
+  margin: 20px 20px;
+}

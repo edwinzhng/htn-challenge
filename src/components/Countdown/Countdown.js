@@ -4,32 +4,46 @@ import './Countdown.css';
 class Countdown extends Component {
   constructor(props) {
     super(props);
-    this.state = { time: 7200 }; // number of seconds in two hours
+    this.state = { time: this.props.length };
   }
 
   componentWillMount() {
-    this.state.
+    this.state.time = this.props.length; // reset to length (in seconds) on refresh
   }
 
   componentDidMount() {
     this.timer = setInterval(
-      () => this.tick(),
-      1000
+      () => this.decrement(), 1000      // 1 second interval to decrement countdown
     );
   }
 
-  tick() {
-    this.setState({
-      date: new Date()
-    });
+  componentWillUnmount() {
+    clearInterval(this.timer);          // stop when component is unmounted
+  }
+
+  decrement() {
+    if(this.state.time == 0) {
+      this.setState({
+        time: 0,                        // keep time at 0 when countdown finished
+      })
+    }
+    else {
+      this.setState({
+        time: this.state.time - 1,
+      });
+    }
   }
 
   render() {
+    let hours = Math.floor(this.state.time / 3600);
+    let minutes = Math.floor((this.state.time % 3600) / 60);
+    let seconds = Math.floor(((this.state.time % 3600) % 60));
+
     return (
       <div className="countdown">
-        <div className="hours"> </div>
-        <div className="minutes"> </div>
-        <div className="seconds"> </div>
+        <div className="row-of-3 hours">H: { hours }</div>
+        <div className="row-of-3 minutes">M: { minutes }</div>
+        <div className="row-of-3 seconds">S: { seconds }</div>
       </div>
     );
   }
