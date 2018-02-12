@@ -5,6 +5,7 @@ class Event extends Component {
   render() {
     return (
       <div className="event">
+
       </div>
     );
   }

@@ -8,7 +8,9 @@ class Countdown extends Component {
   }
 
   componentWillMount() {
-    this.state.time = this.props.length; // reset to length (in seconds) on refresh
+    this.setState({
+      time: this.props.length,        // reset to length (in seconds) on refresh
+    })
   }
 
   componentDidMount() {
@@ -22,7 +24,7 @@ class Countdown extends Component {
   }
 
   decrement() {
-    if(this.state.time == 0) {
+    if(this.state.time === 0) {
       this.setState({
         time: 0,                        // keep time at 0 when countdown finished
       })
@@ -35,9 +37,9 @@ class Countdown extends Component {
   }
 
   render() {
-    let hours = Math.floor(this.state.time / 3600);
-    let minutes = Math.floor((this.state.time % 3600) / 60);
-    let seconds = Math.floor(((this.state.time % 3600) % 60));
+    let hours = Math.floor(this.state.time / 3600),
+        minutes = Math.floor((this.state.time % 3600) / 60),
+        seconds = Math.floor(((this.state.time % 3600) % 60));
 
     return (
       <div className="countdown">

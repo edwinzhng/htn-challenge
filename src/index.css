@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Poppins');
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri|Varela+Round');
 
 * {
   margin: 0;
@@ -10,6 +10,6 @@ body, html {
   font-family: 'Hind Siliguri', sans-serif;
 }
 
-#root {
-  min-height: 100%;
+html {
+  background: linear-gradient(to top, #F1FDFF, #C5F4FF);
 }
