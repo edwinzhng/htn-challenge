@@ -39,15 +39,17 @@ class Event extends Component {
 
     return (
       <div className={"event " + color}>
-        <div className="toprow">
-          <div className="title">{this.props.title}</div>
-          <div className="time">
-            {day} | {starthour}:{startmin} - {endhour}:{endmin}
+        <div className="content">
+          <div className="toprow">
+            <div className="title">{this.props.title}</div>
+            <div className="time">
+              {day} | {starthour}:{startmin} - {endhour}:{endmin}
+            </div>
           </div>
-        </div>
-        <div className="bottomrow">
-          <div className="description">{this.props.description}</div>
-          <div className="location">{this.props.location}</div>
+          <div className="bottomrow">
+            <div className="description">{this.props.description}</div>
+            <div className="location">{this.props.location}</div>
+          </div>
         </div>
         <div className="buttons">
           <button>+</button>

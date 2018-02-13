@@ -11,8 +11,7 @@ class App extends Component {
         <div className="nav">
           <Navbar />
         </div>
-        <div className="header">
-          <h2>Hacking begins in . . .</h2>
+        <div className="counter">
           <Countdown length='7200'/>
         </div>
         <div className="event-body">

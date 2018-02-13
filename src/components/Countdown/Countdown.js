@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Gear from '../../img/gear.svg'
 import './Countdown.css';
 
 class Countdown extends Component {
@@ -35,11 +36,16 @@ class Countdown extends Component {
         minutes = Math.floor((this.state.time % 3600) / 60),
         seconds = Math.floor(((this.state.time % 3600) % 60));
 
+        hours = ("0" + hours).slice(-2);
+        minutes = ("0" + minutes).slice(-2);
+        seconds = ("0" + seconds).slice(-2);
+
     return (
       <div className="countdown">
-        <div className="row-of-3 hours">H: {("0" + hours).slice(-2)}</div>
-        <div className="row-of-3 minutes">M: {("0" + minutes).slice(-2)}</div>
-        <div className="row-of-3 seconds">S: {("0" + seconds).slice(-2)}</div>
+        <h2>Hacking Begins in . . .</h2>
+        <div className="countdown-row hrs"><img className="gear" src={Gear} alt="gear"/>{hours}</div>
+        <div className="countdown-row min"><img className="middlegear" src={Gear} alt="gear"/>{minutes}</div>
+        <div className="countdown-row sec"><img className="gear" src={Gear} alt="gear"/>{seconds}</div>
       </div>
     );
   }

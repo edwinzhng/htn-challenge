@@ -1,10 +1,46 @@
 .countdown {
-  text-align: center;
-  margin: 20px;
+  margin-top: 75px;
+  padding: 20px 0px;
 }
 
-.row-of-3 {
-  width: 100px;
+.countdown-row {
   display: inline;
-  margin: 20px 20px;
+  text-align: center;
+}
+
+.countdown h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 40px;
+  font-family: 'Poppins';
+}
+
+.countdown .middlegear {
+  vertical-align: middle;
+  height: 200px;
+  animation: spinbackward 1s infinite;
+}
+
+.countdown .gear {
+  vertical-align: middle;
+  height: 200px;
+  animation: spinforward 1s infinite;
+}
+
+@keyframes spinforward {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes spinbackward {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
 }
