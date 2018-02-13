@@ -8,8 +8,14 @@
   min-height: 100%;
 }
 
+.event-body {
+  width: 1200px;
+  margin: 10px 100px;
+}
+
 .header {
   margin-top: 75px;
+  padding: 20px 0px;
 }
 
 .header h2 {

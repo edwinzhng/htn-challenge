@@ -3,25 +3,55 @@ import './Event.css';
 
 class Event extends Component {
   render() {
-    var start = new Date(this.props.start);
-    var end = new Date(this.props.end);
+    var start = new Date(this.props.start),
+        end = new Date(this.props.end),
+        weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        day = weekday[start.getDay()],
+        starthour = start.getHours(),
+        startmin = start.getHours(),
+        endhour = end.getHours(),
+        endmin = end.getMinutes();
 
-    var weekday = new Array(7);
-    weekday[0] =  "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
+        starthour = starthour < 10 ? '0' + starthour : starthour;
+        startmin = startmin < 10 ? '0' + startmin : startmin;
+        endhour = endhour < 10 ? '0' + endhour : endhour;
+        endmin = endmin < 10 ? '0' + endmin : endmin;
 
-    var day = weekday[start.getDay()];
-
+        var color = "blue";  // default to blue
+        if(this.props.tags.includes("logistics") || this.props.tags.includes("judging")) {
+          color = "blue";
+        }
+        else if(this.props.tags.includes("workshop")) {
+          color = "teal";
+        }
+        else if(this.props.tags.includes("food")) {
+          color = "green";
+        }
+        else if(this.props.tags.includes("lightning_challenge")) {
+          color = "yellow";
+        }
+        else if(this.props.tags.includes("talk")) {
+          color = "purple";
+        }
+        else if(this.props.tags.includes("meetup")) {
+          color = "red";
+        }
 
     return (
-      <div className="event">
-        <div className="title">{this.props.title}</div>
-        <div className="time">{day} { start.getHours()}:{start.getMinutes() } - { end.getMinutes() }</div>
+      <div className={"event " + color}>
+        <div className="toprow">
+          <div className="title">{this.props.title}</div>
+          <div className="time">
+            {day} | {starthour}:{startmin} - {endhour}:{endmin}
+          </div>
+        </div>
+        <div className="bottomrow">
+          <div className="description">{this.props.description}</div>
+          <div className="location">{this.props.location}</div>
+        </div>
+        <div className="buttons">
+          <button>+</button>
+        </div>
       </div>
     );
   }

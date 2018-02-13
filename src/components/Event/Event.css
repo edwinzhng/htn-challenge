@@ -1,21 +1,72 @@
 .event {
   background-color: #fff;
-  padding: 10px;
+  padding: 15px 20px;
   margin: 15px 0px;
   cursor: pointer;
   border-radius: 5px;
   box-shadow: 0px 1px 4px #aaaaaa;
-  height: 75px;
+  min-height: 70px;
+  overflow: auto;
+  transition: all 0.1s ease-in-out;
+}
+
+.event .toprow {
+  width: 100%;
+  overflow: auto;
 }
 
 .event .title {
   float: left;
-  width: 50%;
+  width: 400px;
   text-align: left;
+  font-size: 22px;
 }
 
 .event .time {
-  width: 30%;
+  max-width: 160px;
   float: right;
   text-align: right;
+}
+
+.event .bottomrow {
+  width: 100%;
+  overflow: auto;
+}
+
+.event .description {
+  max-width: 400px;
+  text-align: left;
+  position: relative;
+  display: inline;
+  float: left;
+}
+
+.event .location {
+  float: right;
+  max-width: 100px;
+  text-align: right;
+}
+
+.blue:hover {
+  box-shadow: 0px 0px 4px 1px #16affb;
+}
+
+.yellow:hover {
+  box-shadow: 0px 0px 4px 1px #fdf15f;
+}
+
+.teal:hover {
+  box-shadow: 0px 0px 4px 1px #15cfb0;
+}
+
+.red:hover {
+  box-shadow: 0px 0px 4px 1px #e03e59;
+}
+
+.green:hover {
+  box-shadow: 0px 0px 4px 1px #83c400;
+}
+
+.purple:hover {
+  box-shadow: 0px 0px 4px 1px #bd63cf;
 }

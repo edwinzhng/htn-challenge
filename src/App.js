@@ -16,9 +16,7 @@ class App extends Component {
           <Countdown length='7200'/>
         </div>
         <div className="event-body">
-          <div>
-            <Schedule />
-          </div>
+          <Schedule />
         </div>
       </div>
     );
