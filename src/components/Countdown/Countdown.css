@@ -5,6 +5,7 @@
 }
 
 .num {
+  line-height: 27px;
   display: inline-grid;
   text-align: center;
   font-family: 'Poppins';
@@ -21,17 +22,17 @@
 
 .hr {
   left: -82px;
-  top: 60px;
+  top: 45px;
 }
 
 .min {
   left: -105px;
-  top: 5px;
+  top: -8px;
 }
 
 .sec {
   left: -86px;
-  top: 25px;
+  top: 10px;
 }
 
 .countdown h2 {
