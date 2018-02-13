@@ -15,19 +15,13 @@ class Countdown extends Component {
 
   componentDidMount() {
     this.timer = setInterval(
-      () => this.decrement(), 1000      // 1 second interval to decrement countdown
+      () => this.decrement(), 1000    // 1 second interval to decrement countdown
     );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer);          // stop when component is unmounted
   }
 
   decrement() {
     if(this.state.time === 0) {
-      this.setState({
-        time: 0,                        // keep time at 0 when countdown finished
-      })
+      clearInterval(this.timer);      // stop when countdown done
     }
     else {
       this.setState({
@@ -43,9 +37,9 @@ class Countdown extends Component {
 
     return (
       <div className="countdown">
-        <div className="row-of-3 hours">H: { hours }</div>
-        <div className="row-of-3 minutes">M: { minutes }</div>
-        <div className="row-of-3 seconds">S: { seconds }</div>
+        <div className="row-of-3 hours">H: {("0" + hours).slice(-2)}</div>
+        <div className="row-of-3 minutes">M: {("0" + minutes).slice(-2)}</div>
+        <div className="row-of-3 seconds">S: {("0" + seconds).slice(-2)}</div>
       </div>
     );
   }

@@ -1,0 +1,17 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+  background-color: #fff;
+  padding: 1em 1.5em;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.logo {
+  float: left;
+  height: 1.7em;
+}

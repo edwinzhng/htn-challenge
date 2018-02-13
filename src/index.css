@@ -11,5 +11,5 @@ body, html {
 }
 
 html {
-  background: linear-gradient(to top, #F1FDFF, #C5F4FF);
+  background: linear-gradient(to bottom, #F1FDFF, #C5F4FF);
 }
