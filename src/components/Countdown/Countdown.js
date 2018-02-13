@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import Gear from '../../img/gear.svg'
+import LGear from '../../img/gear_left.svg'
+import MidGear from '../../img/gear_mid.svg'
+import RGear from '../../img/gear_right.svg'
 import './Countdown.css';
 
 class Countdown extends Component {
@@ -43,9 +45,9 @@ class Countdown extends Component {
     return (
       <div className="countdown">
         <h2>Hacking Begins in . . .</h2>
-        <div className="countdown-row hrs"><img className="gear" src={Gear} alt="gear"/>{hours}</div>
-        <div className="countdown-row min"><img className="middlegear" src={Gear} alt="gear"/>{minutes}</div>
-        <div className="countdown-row sec"><img className="gear" src={Gear} alt="gear"/>{seconds}</div>
+        <img className="leftgear" src={LGear} alt="gear"/><div className="num hr">{hours}</div>
+        <img className="middlegear" src={MidGear} alt="gear"/><div className="num min">{minutes}</div>
+        <img className="rightgear" src={RGear} alt="gear"/><div className="num sec">{seconds}</div>
       </div>
     );
   }

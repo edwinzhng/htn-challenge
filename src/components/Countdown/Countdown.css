@@ -1,11 +1,37 @@
 .countdown {
   margin-top: 75px;
   padding: 20px 0px;
+  text-align: center !important;
 }
 
-.countdown-row {
-  display: inline;
+.num {
+  display: inline-grid;
   text-align: center;
+  font-family: 'Poppins';
+  font-size: 36px;
+  z-index: 10;
+  position: relative;
+  overflow:hidden;
+  letter-spacing: 3px;
+  max-width: 55px;
+  min-width: 55px;
+  text-overflow: ellipsis;
+  color: #374146;
+}
+
+.hr {
+  left: -82px;
+  top: 60px;
+}
+
+.min {
+  left: -105px;
+  top: 5px;
+}
+
+.sec {
+  left: -86px;
+  top: 25px;
 }
 
 .countdown h2 {
@@ -15,15 +41,28 @@
   font-family: 'Poppins';
 }
 
-.countdown .middlegear {
+.rightgear, .leftgear, .middlegear {
   vertical-align: middle;
-  height: 200px;
+  position: relative;
+}
+
+.countdown .middlegear {
+  height: 280px;
+  top: -20px;
+  margin: auto -60px;
   animation: spinbackward 1s infinite;
 }
 
-.countdown .gear {
-  vertical-align: middle;
-  height: 200px;
+.countdown .leftgear {
+  margin: auto -70px;
+  top: 35px;
+  height: 250px;
+  animation: spinforward 1s infinite;
+}
+
+.countdown .rightgear {
+  margin: auto -65px;
+  height: 250px;
   animation: spinforward 1s infinite;
 }
 
