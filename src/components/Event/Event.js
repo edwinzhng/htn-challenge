@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import './Event.css';
 
 class Event extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isPersonal: false,
+    }
+  }
+
   render() {
     var start = new Date(this.props.start),
         end = new Date(this.props.end),

@@ -11,12 +11,8 @@ class App extends Component {
         <div className="nav">
           <Navbar />
         </div>
-        <div className="counter">
-          <Countdown length='7200'/>
-        </div>
-        <div className="event-body">
-          <Schedule />
-        </div>
+        <Countdown length='7200'/>
+        <Schedule />
       </div>
     );
   }

@@ -2,3 +2,9 @@
   margin: 20px;
   width: 60%;
 }
+
+.events {
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+}

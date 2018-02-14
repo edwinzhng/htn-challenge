@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Event from '../Event/Event.js'
 import Search from '../Search/Search.js'
+import PersonalSchedule from '../PersonalSchedule/PersonalSchedule.js'
 import './Schedule.css';
 
 class Schedule extends Component {
@@ -58,9 +59,12 @@ class Schedule extends Component {
 
   render() {
     return (
-      <div className="schedule">
-        <Search />
-        { this.setEvents() }
+      <div className="events">
+        <div className="schedule">
+          <Search />
+          { this.setEvents() }
+        </div>
+        <PersonalSchedule />
       </div>
     );
   }

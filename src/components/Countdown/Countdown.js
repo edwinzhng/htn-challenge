@@ -7,7 +7,9 @@ import './Countdown.css';
 class Countdown extends Component {
   constructor(props) {
     super(props);
-    this.state = { time: this.props.length };
+    this.state = {
+      time: this.props.length
+    };
   }
 
   componentWillMount() {
