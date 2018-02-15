@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 import './Event.css';
 
 class Event extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isPersonal: false,
-    }
-  }
-
   render() {
     var start = new Date(this.props.start),
         end = new Date(this.props.end),
@@ -24,25 +17,25 @@ class Event extends Component {
         endhour = endhour < 10 ? '0' + endhour : endhour;
         endmin = endmin < 10 ? '0' + endmin : endmin;
 
-        var color = "blue";  // default to blue
-        if(this.props.tags.includes("logistics") || this.props.tags.includes("judging")) {
-          color = "blue";
-        }
-        else if(this.props.tags.includes("workshop")) {
-          color = "teal";
-        }
-        else if(this.props.tags.includes("food")) {
-          color = "green";
-        }
-        else if(this.props.tags.includes("lightning_challenge")) {
-          color = "yellow";
-        }
-        else if(this.props.tags.includes("talk")) {
-          color = "purple";
-        }
-        else if(this.props.tags.includes("meetup")) {
-          color = "red";
-        }
+    var color = "blue";  // default to blue
+    if(this.props.tags.includes("logistics") || this.props.tags.includes("judging")) {
+      color = "blue";
+    }
+    else if(this.props.tags.includes("workshop")) {
+      color = "teal";
+    }
+    else if(this.props.tags.includes("food")) {
+      color = "green";
+    }
+    else if(this.props.tags.includes("lightning_challenge")) {
+      color = "yellow";
+    }
+    else if(this.props.tags.includes("talk")) {
+      color = "purple";
+    }
+    else if(this.props.tags.includes("meetup")) {
+      color = "red";
+    }
 
     return (
       <div className={"event " + color}>

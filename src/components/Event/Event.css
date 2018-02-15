@@ -6,31 +6,40 @@
   border-radius: 5px;
   box-shadow: 0px 1px 4px #aaaaaa;
   min-height: 70px;
-  overflow: auto;
+  overflow: hidden;
   transition: all 0.1s ease-in-out;
 }
 
 .event .toprow {
   width: 100%;
   overflow: auto;
+  height: 100%;
+  margin: auto;
 }
 
 .event .title {
   float: left;
-  width: 400px;
+  max-width: 75%;
   text-align: left;
-  font-size: 22px;
+  font-size: 23px;
 }
 
 .event .time {
-  max-width: 160px;
+  font-size: 16px;
+  max-width: 25%;
   float: right;
   text-align: right;
 }
 
 .event .bottomrow {
+  font-size: 17px;
   width: 100%;
-  overflow: auto;
+  transition: 1s all ease-in-out;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
 }
 
 .event .description {
@@ -45,6 +54,42 @@
   float: right;
   max-width: 100px;
   text-align: right;
+}
+
+.content {
+  width: calc(100% - 60px);
+  float: left;
+}
+
+.buttons {
+  float: right;
+  max-width: 30px;
+  min-height: 100%;
+}
+
+.buttons button {
+  float: right;
+  background: none;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 36px;
+  transition: 0.1s all ease-in-out;
+}
+
+button:focus, button:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+.buttons button:hover {
+  color: #545E63;
+}
+
+.event:hover .bottomrow {
+  opacity: 1;
+  max-height: 500px;
+  transition: all 0.25s ease-in-out;
 }
 
 .blue:hover {
@@ -69,29 +114,4 @@
 
 .purple:hover {
   box-shadow: 0px 0px 4px 1px #bd63cf;
-}
-
-.content {
-  width: calc(100% - 60px);
-  float: left;
-}
-
-.buttons {
-  float: right;
-  width: 40px;
-  min-height: 100%;
-}
-
-.buttons button {
-  float: right;
-  background: none;
-  border: none;
-  color: #ddd;
-  cursor: pointer;
-  font-size: 50px;
-  transition: 0.1s all ease-in-out;
-}
-
-.buttons button:hover {
-  color: #545E63;
 }

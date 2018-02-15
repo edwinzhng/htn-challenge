@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './PersonalSchedule.css';
 
 class PersonalSchedule extends Component {
-
   render() {
     var events = this.props.events;
     if(!events) {
