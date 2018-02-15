@@ -38,8 +38,10 @@ class Event extends Component {
       color = "red";
     }
 
+    let hidden = this.props.isHidden ? "hidden" : "";
+
     return (
-      <div className={"event " + color}>
+      <div className={"event " + color + " " + hidden}>
         <div className="content">
           <div className="toprow">
             <div className="title">{this.props.title}</div>

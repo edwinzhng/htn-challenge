@@ -1,7 +1,6 @@
 # Hack the North Frontend Challenge
 
-Hosted on [Github Pages](http://edwinzhang.me/htn-challenge)
-Source code for my Hack the North frontend challenge built using [React](https://facebook.github.io/react/)
+Source code for my Hack the North frontend challenge built using React, hosted on [Github Pages](http://edwinzhang.me/htn-challenge)
 
 ## For local development
 
@@ -15,3 +14,12 @@ Source code for my Hack the North frontend challenge built using [React](https:/
 * Seeing what events other people are going to
 * Filter events by most popular
 * Clicking on a location creates a pop-up map with directions
+* Export personal schedule to Google Calendar etc.
+* Icon to show if event is already on personal calendar or not
+* Search bar suggestions
+
+## Performance fixes
+
+* Binary search for personal schedule insertions
+* Faster filtering algorithm
+* Use CSS modules or anything that's easier to structure

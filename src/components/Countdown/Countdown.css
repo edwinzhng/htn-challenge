@@ -18,6 +18,7 @@
   min-width: 55px;
   text-overflow: ellipsis;
   color: #374146;
+  user-select: none;
 }
 
 .hr {
@@ -45,6 +46,7 @@
 .rightgear, .leftgear, .middlegear {
   vertical-align: middle;
   position: relative;
+  user-select: none;
 }
 
 .countdown .middlegear {

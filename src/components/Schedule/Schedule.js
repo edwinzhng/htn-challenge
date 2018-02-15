@@ -10,24 +10,27 @@ class Schedule extends Component {
     super(props);
     this.state = {
       data: false,
+      events: [],
       savedEvents: [],
     }
+    this.filterEvents = this.filterEvents.bind(this);
   }
 
   componentWillMount() {
     axios.get('https://hackthenorth.com/fe-schedule.json')
       .then(response => {
         this.setState({ data: response.data });
-        this.setEvents();
+        this.initEvents();
       })
       .catch(function (error) {
         console.log(error);
       });
   }
 
-  createEvent(data, isPersonal) {
+  createEvent(data, dataIndex, isPersonal, isHidden) {
     let event = <Event
       key={data.id}
+      dataIndex={dataIndex}
       title={data.title}
       start={data.start_time}
       end={data.end_time}
@@ -37,71 +40,65 @@ class Schedule extends Component {
       addPersonalEvent={() => this.addPersonalEvent(data.id)}
       deleteEvent={() => this.deleteEvent(data.id)}
       isPersonal={isPersonal}
+      isHidden={isHidden}
     />;
     return event;
   }
 
-  setEvents() {
+  initEvents() {
     let events = [];
     for (let i = 0; i < this.state.data.length; i++) {
-      let event = this.createEvent(this.state.data[i], false);
+      let event = this.createEvent(this.state.data[i], i, false, false);
       events.push(event);
     }
-
     // sort events by date
     events.sort(function(a, b) {
-      let startA = new Date(a.props.start_time),
-          startB = new Date(b.props.start_time),
-          endA = new Date(a.props.end_time),
-          endB = new Date(a.props.end_time);
+      let startA = new Date(a.props.start_time), startB = new Date(b.props.start_time),
+          endA = new Date(a.props.end_time), endB = new Date(a.props.end_time);
 
       return startA > startB ? -1 :    // a larger than b if start time is later
               startA < startB ? 1 :    // smaller if start time is earlier
               endA > endB ? -1 :       // larger if start times equal but end time later
               endA < endB ? 1 : 0;     // smaller if start times equal but end time earlier
     });
-    return events;
+    this.setState({
+      events: events,
+    });
   }
 
   addPersonalEvent(id) {
     let newEvent = false,
         savedEvents = this.state.savedEvents.slice(),
         sortIndex = 0;
-
     // check if event is already saved
     for(let i = 0; i < this.state.savedEvents.length; i++) {
       if(this.state.savedEvents[i].key === String(id)) {
         return;
       }
     }
-
     // find event from data
     for(let i = 0; i < this.state.data.length; i++) {
       if(this.state.data[i].id === id) {
-        newEvent = this.createEvent(this.state.data[i], true);
+        newEvent = this.createEvent(this.state.data[i], i, true, false);
         break;
       }
     }
-
     // find index to insert
     while(sortIndex < savedEvents.length) {
-      let startA = new Date(newEvent.props.start),
-          startB = new Date(savedEvents[sortIndex].props.start),
-          endA = new Date(newEvent.props.end),
-          endB = new Date(savedEvents[sortIndex].props.end);
-
+      let startA = new Date(newEvent.props.start), startB = new Date(savedEvents[sortIndex].props.start),
+          endA = new Date(newEvent.props.end), endB = new Date(savedEvents[sortIndex].props.end);
       if(startA > startB) {
         sortIndex++;
       }
       else if(startA === startB) {
         if (endA > endB) {
+          console.log("horray");
           sortIndex++;
         }
         else { break; }
       }
       else { break; }
     }
-
     // insert event in order
     savedEvents.splice(sortIndex, 0, newEvent);
     this.setState({
@@ -122,12 +119,39 @@ class Schedule extends Component {
     }));
   }
 
+  // brute force checking for matching strings xd
+  filterEvents() {
+    let filterText = document.getElementById('search').value.toLowerCase();
+    let events = this.state.events.slice();
+    for(let i = 0; i < events.length; i++) {
+      if( String(events[i].props.title).toLowerCase().search(filterText) === -1 &&
+          String(events[i].props.tags).toLowerCase().search(filterText) === -1 &&
+          String(events[i].props.description).toLowerCase().search(filterText) === -1 &&
+          String(events[i].props.location).toLowerCase().search(filterText) === -1)
+      {
+        if(!events[i].props.isHidden) {
+          let event = this.createEvent(this.state.data[events[i].props.dataIndex], events[i].props.dataIndex, false, true);
+          events.splice(i, 1, event);
+        }
+      }
+      else {
+        if(events[i].props.isHidden) {
+          let event = this.createEvent(this.state.data[events[i].props.dataIndex], events[i].props.dataIndex, false, false);
+          events.splice(i, 1, event);
+        }
+      }
+    }
+    this.setState({
+      events: events,
+    });
+  }
+
   render() {
     return (
       <div className="events">
         <div className="schedule">
-          <Search />
-          { this.setEvents() }
+          <Search filterEvents={this.filterEvents}/>
+          { this.state.events }
         </div>
         <PersonalSchedule events={this.state.savedEvents}/>
       </div>
