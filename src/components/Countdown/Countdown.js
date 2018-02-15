@@ -29,9 +29,9 @@ class Countdown extends Component {
       clearInterval(this.timer);      // stop when countdown done
     }
     else {
-      this.setState({
-        time: this.state.time - 1,
-      });
+      this.setState((prevState) => ({
+        time: prevState.time - 1
+      }));
     }
   }
 

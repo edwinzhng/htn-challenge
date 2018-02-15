@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Ionicon from 'react-ionicons'
 import './Event.css';
 
 class Event extends Component {
@@ -52,7 +53,12 @@ class Event extends Component {
           </div>
         </div>
         <div className="buttons">
-          <button onClick={this.props.addPersonalEvent}>+</button>
+          <button onClick={this.props.isPersonal ? this.props.deleteEvent : this.props.addPersonalEvent}>
+            { this.props.isPersonal ?
+                <Ionicon icon="md-trash" fontSize="40px" color="#ddd" className="delete"/> :
+                <Ionicon icon="md-add" fontSize="40px" color="#ddd" className="add"/>
+            }
+          </button>
         </div>
       </div>
     );

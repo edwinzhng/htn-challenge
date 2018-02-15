@@ -1,8 +1,9 @@
+/* GENERAL */
+
 .event {
   background-color: #fff;
   padding: 15px 20px;
   margin: 15px 0px;
-  cursor: pointer;
   border-radius: 5px;
   box-shadow: 0px 1px 4px #aaaaaa;
   min-height: 70px;
@@ -69,13 +70,17 @@
   min-height: 100%;
 }
 
+button:hover svg {
+  fill: #545E63;
+  transition: 0.1s all ease-in-out;
+}
+
 .buttons button {
   float: right;
   background: none;
   border: none;
   color: #ddd;
   cursor: pointer;
-  font-size: 36px;
   transition: 0.1s all ease-in-out;
 }
 
@@ -84,14 +89,10 @@ button:focus, button:active {
    box-shadow: none;
 }
 
-.buttons button:hover {
-  color: #545E63;
-}
-
 .event:hover .bottomrow {
   opacity: 1;
   max-height: 500px;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .blue:hover {
@@ -116,4 +117,20 @@ button:focus, button:active {
 
 .purple:hover {
   box-shadow: 0px 0px 4px 1px #bd63cf;
+}
+
+/* NORMAL EVENT */
+
+
+
+/* PERSONAL EVENT */
+.personal .event {
+  margin: 15px auto;
+  width: 90%;
+}
+
+.personal .event:hover .bottomrow {
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
 }
