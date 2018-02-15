@@ -10,6 +10,7 @@ class Schedule extends Component {
     super(props);
     this.state = {
       data: false,
+      savedEvents: [],
     }
   }
 
@@ -33,28 +34,47 @@ class Schedule extends Component {
       description={data.description}
       location={data.location}
       tags={data.tags}
+      addPersonalEvent={() => this.addPersonalEvent(data.id)}
     />;
     return event;
   }
 
   setEvents() {
-    var events = [];
+    let events = [];
     for (let i = 0; i < this.state.data.length; i++) {
       let event = this.createEvent(this.state.data[i]);
       events.push(event);
     }
     // sort events by date
     events.sort(function(a, b) {
-      var startA = new Date(a.props.start_time);
-      var startB = new Date(b.props.start_time);
-      var endA = new Date(a.props.end_time);
-      var endB = new Date(a.props.end_time);
+      let startA = new Date(a.props.start_time),
+          startB = new Date(b.props.start_time),
+          endA = new Date(a.props.end_time),
+          endB = new Date(a.props.end_time);
       return startA > startB ? -1 :    // a larger than b if start time is later
               startA < startB ? 1 :    // smaller if start time is earlier
               endA > endB ? -1 :       // larger if start times equal but end time later
               endA < endB ? 1 : 0;     // smaller if start times equal but end time earlier
     });
     return events;
+  }
+
+  addPersonalEvent(id) {
+    // check if event is already saved
+    for(let i = 0; i < this.state.savedEvents.length; i++) {
+      if(this.state.savedEvents[i].id === id) {
+        return;
+      }
+    }
+    // insert event
+    for(let i = 0; i < this.state.data.length; i++) {
+      if(this.state.data[i].id === id) {
+        this.setState((prevState) => ({
+          savedEvents: prevState.savedEvents.concat([this.state.data[i]])
+        }));
+      }
+    }
+    return;
   }
 
   render() {
@@ -64,7 +84,7 @@ class Schedule extends Component {
           <Search />
           { this.setEvents() }
         </div>
-        <PersonalSchedule />
+        <PersonalSchedule events={this.state.savedEvents}/>
       </div>
     );
   }

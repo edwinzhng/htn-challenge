@@ -3,7 +3,7 @@ import './Event.css';
 
 class Event extends Component {
   render() {
-    var start = new Date(this.props.start),
+    let start = new Date(this.props.start),
         end = new Date(this.props.end),
         weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         day = weekday[start.getDay()],
@@ -17,7 +17,7 @@ class Event extends Component {
         endhour = endhour < 10 ? '0' + endhour : endhour;
         endmin = endmin < 10 ? '0' + endmin : endmin;
 
-    var color = "blue";  // default to blue
+    let color = "blue";  // default to blue
     if(this.props.tags.includes("logistics") || this.props.tags.includes("judging")) {
       color = "blue";
     }
@@ -52,7 +52,7 @@ class Event extends Component {
           </div>
         </div>
         <div className="buttons">
-          <button>+</button>
+          <button onClick={this.props.addPersonalEvent}>+</button>
         </div>
       </div>
     );

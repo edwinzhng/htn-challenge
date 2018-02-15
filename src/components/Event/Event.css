@@ -19,27 +19,28 @@
 
 .event .title {
   float: left;
-  max-width: 75%;
+  max-width: 70%;
   text-align: left;
   font-size: 23px;
 }
 
 .event .time {
   font-size: 16px;
-  max-width: 25%;
+  max-width: 30%;
   float: right;
   text-align: right;
 }
 
 .event .bottomrow {
   font-size: 17px;
+  padding: 10px 0;
   width: 100%;
   transition: 1s all ease-in-out;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .event .description {
@@ -52,8 +53,9 @@
 
 .event .location {
   float: right;
-  max-width: 100px;
+  max-width: 30%;
   text-align: right;
+  font-weight: 600;
 }
 
 .content {
@@ -89,7 +91,7 @@ button:focus, button:active {
 .event:hover .bottomrow {
   opacity: 1;
   max-height: 500px;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .blue:hover {
