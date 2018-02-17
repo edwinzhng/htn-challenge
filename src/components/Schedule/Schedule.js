@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import mobile from 'is-mobile';
 import axios from 'axios';
 import Event from '../Event/Event.js'
 import Search from '../Search/Search.js'
 import PersonalSchedule from '../PersonalSchedule/PersonalSchedule.js'
+import ScheduleSelector from '../ScheduleSelector/ScheduleSelector.js'
 import './Schedule.css';
 
 class Schedule extends Component {
@@ -12,8 +14,12 @@ class Schedule extends Component {
       data: false,
       events: [],
       savedEvents: [],
+      isSavedScheduleView: false,
+      isMobile: false,
     }
     this.filterEvents = this.filterEvents.bind(this);
+    this.changeToSaved = this.changeToSaved.bind(this);
+    this.changeToEvents = this.changeToEvents.bind(this);
   }
 
   componentDidMount() {
@@ -24,7 +30,11 @@ class Schedule extends Component {
       })
       .catch(function (error) {
         console.log(error);
-      });
+      }
+    );
+    this.setState({
+      isMobile: mobile(),
+    });
   }
 
   createEvent(data, dataIndex, isPersonal, isHidden) {
@@ -92,7 +102,6 @@ class Schedule extends Component {
       }
       else if(startA === startB) {
         if (endA > endB) {
-          console.log("horray");
           sortIndex++;
         }
         else { break; }
@@ -146,14 +155,38 @@ class Schedule extends Component {
     });
   }
 
+  changeToEvents() {
+    if(this.state.isSavedScheduleView) {
+      this.setState({
+        isSavedScheduleView: false,
+      });
+    }
+  }
+
+  changeToSaved() {
+    if(!this.state.isSavedScheduleView) {
+      this.setState({
+        isSavedScheduleView: true,
+      });
+    }
+  }
+
   render() {
+    let scheduleSelector = this.state.isMobile ?
+          <ScheduleSelector changeToSaved={this.changeToSaved} changeToEvents={this.changeToEvents} /> : null,
+        search = <Search filterEvents={this.filterEvents}/>,
+        savedSchedule = <PersonalSchedule events={this.state.savedEvents}/>
+
     return (
-      <div className="events">
-        <div className="schedule">
-          <Search filterEvents={this.filterEvents}/>
-          { this.state.events }
+      <div className="all">
+          { scheduleSelector }
+        <div className="events">
+          <div className={this.state.isMobile && this.state.isSavedScheduleView ? "hidden" : "schedule"}>
+            { this.state.isMobile && this.state.isSavedScheduleView ? null : search}
+            { this.state.isMobile && this.state.isSavedScheduleView ? null : this.state.events}
+          </div>
+          { this.state.isMobile ? (this.state.isSavedScheduleView ? savedSchedule : null) : savedSchedule}
         </div>
-        <PersonalSchedule events={this.state.savedEvents}/>
       </div>
     );
   }

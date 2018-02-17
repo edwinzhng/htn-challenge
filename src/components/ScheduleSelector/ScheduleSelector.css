@@ -1,0 +1,29 @@
+.selector {
+  position: sticky;
+  top: 70px;
+  width: 100%;
+  z-index: 10;
+}
+
+.selector button {
+  font-family: 'Poppins';
+  font-size: 17px;
+  padding: 5px 5px;
+  background: #fff;
+  opacity: 0.7;
+  border: 2px solid #0097c4;
+  outline: none;
+  box-shadow: none;
+  width: calc(50% - 20px);
+}
+
+.selectEvents {
+  border-radius: 5px 0 0 5px;
+  border-right: 0 !important;
+  margin-left: 20px;
+}
+
+.selectSaved {
+  border-radius: 0 5px 5px 0;
+  margin-right: 20px;
+}

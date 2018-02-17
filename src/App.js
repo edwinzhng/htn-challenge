@@ -8,9 +8,7 @@ class App extends Component {
   render() {
     return (
       <div className="main">
-        <div className="nav">
-          <Navbar />
-        </div>
+        <Navbar />
         <Countdown length='7200'/>
         <Schedule />
       </div>

@@ -1,6 +1,6 @@
 .countdown {
   margin-top: 75px;
-  padding: 20px 0px;
+  margin-bottom: 20px;
   text-align: center !important;
 }
 
@@ -109,12 +109,13 @@
   }
 
   .num {
+    line-height: 24px;
     font-size: 30px;
   }
 
   .hr {
     left: -27px;
-    top: 45px;
+    top: 44px;
   }
 
   .min {
@@ -123,8 +124,8 @@
   }
 
   .sec {
-    left: -32px;
-    top: 10px;
+    left: -31px;
+    top: 8px;
   }
 }
 
@@ -133,6 +134,10 @@
 @media only screen and (max-width: 480px) {
   .countdown h2 {
     font-size: 28px;
+  }
+
+  .num {
+    line-height: 19px;
   }
 
   .countdown .middlegear {
@@ -156,16 +161,16 @@
 
   .hr {
     left: 5px;
-    top: 40px;
+    top: 35px;
   }
 
   .min {
     left: -41px;
-    top: 3px;
+    top: -1px;
   }
 
   .sec {
     left: 2px;
-    top: 10px;
+    top: 5px;
   }
 }
