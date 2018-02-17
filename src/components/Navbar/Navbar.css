@@ -20,3 +20,9 @@
   float: left;
   height: 1.7em;
 }
+
+@media only screen and (max-width: 480px) {
+  .links {
+    font-size: 14px;
+  }
+}

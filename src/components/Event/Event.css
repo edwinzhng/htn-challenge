@@ -48,18 +48,18 @@
 
 .event .bottomrow {
   font-size: 17px;
-  padding: 10px 0;
+  padding: 0;
   width: 100%;
   transition: 1s all ease-in-out;
   background-color: white;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.25s ease-in-out;
+  transition: max-height 0.25s ease-in-out;
 }
 
 .event .description {
-  max-width: 400px;
+  max-width: 75%;
   text-align: left;
   position: relative;
   display: inline;
@@ -68,7 +68,7 @@
 
 .event .location {
   float: right;
-  max-width: 30%;
+  max-width: 25%;
   text-align: right;
   font-weight: 600;
 }
@@ -106,7 +106,8 @@ button:focus, button:active {
 .event:hover .bottomrow {
   opacity: 1;
   max-height: 500px;
-  transition: all 0.5s ease-in-out;
+  padding: 10px 0;
+  transition: all 0.4s ease-in-out, padding 1ms;
 }
 
 .blue:hover {
@@ -136,7 +137,6 @@ button:focus, button:active {
 /* NORMAL EVENT */
 
 
-
 /* PERSONAL EVENT */
 .personal .event {
   margin: 15px auto;
@@ -144,7 +144,21 @@ button:focus, button:active {
 }
 
 .personal .event:hover .bottomrow {
+  padding: 0px;
   opacity: 0;
   max-height: 0;
   transition: all 0.5s ease-in-out;
+}
+
+/* Small-medium width tablets: iPad mini */
+
+@media only screen and (max-width: 1280px) {
+  .event .title {
+    font-size: 20px;
+    max-width: 60%;
+  }
+
+  .event .time {
+    max-width: 40%;
+  }
 }

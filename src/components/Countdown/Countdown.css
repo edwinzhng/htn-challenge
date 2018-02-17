@@ -86,3 +86,86 @@
     transform: rotate(-45deg);
   }
 }
+
+/* Horizontal Phones */
+
+@media only screen and (max-width: 767px) {
+  .countdown .middlegear {
+    left: 30px;
+    height: 224px;
+    top: -15px;
+    margin: auto -50px;
+  }
+
+  .countdown .leftgear {
+    left: 30px;
+    top: 35px;
+    height: 200px;
+  }
+
+  .countdown .rightgear {
+    left: 30px;
+    height: 200px;
+  }
+
+  .num {
+    font-size: 30px;
+  }
+
+  .hr {
+    left: -27px;
+    top: 45px;
+  }
+
+  .min {
+    left: -57px;
+    top: -5px;
+  }
+
+  .sec {
+    left: -32px;
+    top: 10px;
+  }
+}
+
+/* Small Phones */
+
+@media only screen and (max-width: 480px) {
+  .countdown h2 {
+    font-size: 28px;
+  }
+
+  .countdown .middlegear {
+    height: 151px;
+    top: -7px;
+    margin: auto -30px;
+  }
+
+  .countdown .leftgear {
+    top: 30px;
+    height: 135px;
+  }
+
+  .countdown .rightgear {
+    height: 135px;
+  }
+
+  .num {
+    font-size: 21px;
+  }
+
+  .hr {
+    left: 5px;
+    top: 40px;
+  }
+
+  .min {
+    left: -41px;
+    top: 3px;
+  }
+
+  .sec {
+    left: 2px;
+    top: 10px;
+  }
+}

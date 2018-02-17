@@ -16,7 +16,7 @@ class Schedule extends Component {
     this.filterEvents = this.filterEvents.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('https://hackthenorth.com/fe-schedule.json')
       .then(response => {
         this.setState({ data: response.data });
