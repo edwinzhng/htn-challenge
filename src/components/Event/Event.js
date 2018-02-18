@@ -55,7 +55,10 @@ class Event extends Component {
           </div>
         </div>
         <div className="buttons">
-          <button onClick={this.props.isPersonal ? this.props.deleteEvent : this.props.addPersonalEvent}>
+          <button onClick={ this.props.isPersonal ? this.props.deleteEvent :
+                            this.props.alreadyAdded ? this.props.deleteEvent :
+                            this.props.addPersonalEvent
+          }>
             { this.props.isPersonal ?
                 <Ionicon  icon="md-trash"
                           fontSize="50px"

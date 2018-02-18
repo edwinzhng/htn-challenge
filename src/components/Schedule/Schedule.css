@@ -1,17 +1,17 @@
 .all {
   position: relative;
-  animation: fadeIn 2s ease-in-out;
 }
 
 .schedule {
   margin: 20px;
   width: 60%;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .events {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
+  display: flex !important;
 }
 
 @keyframes fadeIn {
@@ -28,7 +28,7 @@
 
 @media only screen and (max-width: 767px) {
   .schedule {
-    width: 100% !important;
+    width: calc(100% - 40px) !important;
   }
 
   .events {
