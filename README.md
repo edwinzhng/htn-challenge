@@ -1,6 +1,6 @@
 # Hack the North Frontend Challenge
 
-Source code for my Hack the North frontend challenge built using React, hosted on [Github Pages](http://edwinzhang.me/htn-challenge)
+Source code for my Hack the North frontend challenge built using React, hosted on [Github Pages](http://www.edwinzhang.me/htn-challenge/)
 
 ## For local development
 
