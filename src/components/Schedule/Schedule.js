@@ -69,9 +69,14 @@ class Schedule extends Component {
   }
 
   initEvents() {
-    let events = [];
+    let events = [], alreadyAdded, arr = [], data;
     for (let i = 0; i < this.state.data.length; i++) {
-      let event = this.createEvent(this.state.data[i], i, false, false, false);
+      data = this.state.data[i];
+      arr = JSON.parse(localStorage.getItem("savedEvents"));
+      alreadyAdded = arr.find((element) => {
+        return element.id === data.id;
+      })
+      let event = this.createEvent(data, i, false, false, alreadyAdded === undefined ? false : true);
       events.push(event);
     }
     // sort events by date
