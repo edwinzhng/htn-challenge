@@ -39,13 +39,15 @@ class Schedule extends Component {
     // render saved events if they already exist
     let local = JSON.parse(localStorage.getItem("savedEvents")),
         savedEvents = [];
-    for(let i = 0; i < local.length; i++) {
-      savedEvents.push(this.createEvent(local[i], local[i].id, true, false, false));
-    }
-    if (savedEvents != null) {
-      this.setState({
-        savedEvents: savedEvents,
-      });
+    if(local !== null) {
+      for(let i = 0; i < local.length; i++) {
+        savedEvents.push(this.createEvent(local[i], local[i].id, true, false, false));
+      }
+      if (savedEvents != null) {
+        this.setState({
+          savedEvents: savedEvents,
+        });
+      }
     }
   }
 
@@ -69,13 +71,16 @@ class Schedule extends Component {
   }
 
   initEvents() {
-    let events = [], alreadyAdded, arr = [], data;
+    let events = [], alreadyAdded = false, arr = [], data;
     for (let i = 0; i < this.state.data.length; i++) {
       data = this.state.data[i];
       arr = JSON.parse(localStorage.getItem("savedEvents"));
-      alreadyAdded = arr.find((element) => {
-        return element.id === data.id;
-      })
+      // check if already in personal from localStorage
+      if(arr !== null) {
+        alreadyAdded = arr.find((element) => {
+          return element.id === data.id;
+        })
+      }
       let event = this.createEvent(data, i, false, false, alreadyAdded === undefined ? false : true);
       events.push(event);
     }
