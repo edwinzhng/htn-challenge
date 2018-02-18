@@ -13,10 +13,14 @@ Source code for my Hack the North frontend challenge built using React, hosted o
 * Gauge interest in activities based on number of people who add events to their personal queue
 * Seeing what events other people are going to
 * Filter events by most popular
+* Different buttons to directly filter each tag
 * Clicking on a location creates a pop-up map with directions
 * Export personal schedule to Google Calendar etc.
 * Search bar suggestions
 * Draggable cards
+* More vibrant card UI
+* Automatically delete events that are over
+* Display the time until the next event
 
 ## Performance fixes
 
@@ -24,3 +28,4 @@ Source code for my Hack the North frontend challenge built using React, hosted o
 * Faster search filtering algorithm
 * Use CSS modules or anything with better structure
 * Optimize for mobile
+* Get the PWA working over HTTPS instead of using localStorage for data

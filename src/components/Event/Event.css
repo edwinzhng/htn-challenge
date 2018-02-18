@@ -146,6 +146,45 @@ button:focus, button:active {
   animation: fadeIn 0.1s ease-in-out;
 }
 
+.personal .event .title {
+  float: none;
+  max-width: 100%;
+  text-align: left;
+  font-size: 23px;
+}
+
+.personal .event .time {
+  font-size: 16px;
+  max-width: 100%;
+  float: none;
+  text-align: left;
+}
+
+.personal .event .bottomrow {
+  font-size: 17px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+
+.personal .event .description {
+  max-width: 100%;
+  display: block;
+  float: none;
+}
+
+.personal .event .location {
+  float: left;
+  max-width: 100%;
+  text-align: left;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.personal .buttons {
+  margin-top: 0;
+}
+
 /*
 .personal .event:hover .bottomrow {
   padding: 0px;

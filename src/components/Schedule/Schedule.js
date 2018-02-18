@@ -23,6 +23,7 @@ class Schedule extends Component {
   }
 
   componentDidMount() {
+    // get JSON file
     axios.get('https://hackthenorth.com/fe-schedule.json')
       .then(response => {
         this.setState({ data: response.data });
@@ -35,6 +36,17 @@ class Schedule extends Component {
     this.setState({
       isMobile: mobile(),
     });
+    // render saved events if they already exist
+    let local = JSON.parse(localStorage.getItem("savedEvents")),
+        savedEvents = [];
+    for(let i = 0; i < local.length; i++) {
+      savedEvents.push(this.createEvent(local[i], local[i].id, true, false, false));
+    }
+    if (savedEvents != null) {
+      this.setState({
+        savedEvents: savedEvents,
+      });
+    }
   }
 
   createEvent(data, dataIndex, isPersonal, isHidden, alreadyAdded) {
@@ -94,6 +106,11 @@ class Schedule extends Component {
       if(this.state.data[i].id === id) {
         newSavedEvent = this.createEvent(this.state.data[i], i, true, false, true);
         newEvent = this.createEvent(this.state.data[i], i, false, false, true);
+        // update localStorage with new event
+        let local = [];
+        local = JSON.parse(localStorage.getItem("savedEvents"));
+        local.push(this.state.data[i]);
+        localStorage.setItem("savedEvents", JSON.stringify(local));
         break;
       }
     }
@@ -131,17 +148,20 @@ class Schedule extends Component {
     let savedEvents = this.state.savedEvents.slice(),
         events = this.state.events.slice(),
         newEvent, index, isHidden;
+    // find event index and remove from savedEvents
     for(let i = 0; i < savedEvents.length; i++) {
       if(this.state.savedEvents[i].key === String(id)) {
         savedEvents.splice(i, 1);
       }
     }
+    // find index and hidden property of event in main list
     for(let i = 0; i < events.length; i++) {
       if(this.state.events[i].key === String(id)) {
         index = i;
         isHidden = this.state.events[i].props.isHidden;
       }
     }
+    // re-render event in main list without checkmark button
     for(let i = 0; i < this.state.data.length; i++) {
       if(this.state.data[i].id === id) {
         newEvent = this.createEvent(this.state.data[i], i, false, isHidden, false);
@@ -149,6 +169,16 @@ class Schedule extends Component {
       }
     }
     events.splice(index, 1, newEvent);
+    // delete event with id from savedEvents localStorage
+    let local = JSON.parse(localStorage.getItem("savedEvents"));
+    for(let i = 0; i < local.length; i++) {
+      if(local[i].id === id) {
+        local.splice(i, 1);
+        break;
+      }
+    }
+    localStorage.setItem("savedEvents", JSON.stringify(local));
+
     this.setState((prevState) => ({
       savedEvents: savedEvents,
       events: events,
@@ -182,6 +212,7 @@ class Schedule extends Component {
     });
   }
 
+  // set mobile view to main schedule
   changeToEvents() {
     if(this.state.isSavedScheduleView) {
       this.setState({
@@ -189,7 +220,7 @@ class Schedule extends Component {
       });
     }
   }
-
+  // set mobile view to saved schedule
   changeToSaved() {
     if(!this.state.isSavedScheduleView) {
       this.setState({
