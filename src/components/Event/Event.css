@@ -2,7 +2,7 @@
 
 .event {
   background-color: #fff;
-  padding: 15px 20px;
+  padding: 15px 10px 15px 20px;
   margin: 15px 0px 0px 0px;
   border-radius: 5px;
   box-shadow: 0px 1px 4px #aaaaaa;
@@ -52,15 +52,16 @@
   width: 100%;
   transition: 1s all ease-in-out;
   background-color: white;
-  max-height: 0;
+  opacity: 1;
+  max-height: 500px;
+  padding: 10px 0;
   overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.25s ease-in-out;
+  transition: max-height 1ms ease-in-out;
 }
 
 .event .description {
-  max-width: 75%;
-  text-align: left;
+  max-width: 70%;
+  text-align: justify;
   position: relative;
   display: inline;
   float: left;
@@ -80,8 +81,9 @@
 
 .buttons {
   float: right;
-  max-width: 30px;
+  max-width: 100%;
   min-height: 100%;
+  margin-top: 15px;
 }
 
 button:hover svg {
@@ -103,12 +105,14 @@ button:focus, button:active {
    box-shadow: none;
 }
 
+/*
 .event:hover .bottomrow {
   opacity: 1;
   max-height: 500px;
   padding: 10px 0;
-  transition: all 0.4s ease-in-out, padding 1ms;
+  transition: all 0.5s ease-in-out, padding 1ms;
 }
+*/
 
 .blue:hover {
   box-shadow: 0px 0px 4px 1px #16affb;
@@ -134,21 +138,20 @@ button:focus, button:active {
   box-shadow: 0px 0px 4px 1px #bd63cf;
 }
 
-/* NORMAL EVENT */
-
-
 /* PERSONAL EVENT */
 .personal .event {
   margin: 15px auto;
   width: 90%;
 }
 
+/*
 .personal .event:hover .bottomrow {
   padding: 0px;
   opacity: 0;
   max-height: 0;
   transition: all 0.5s ease-in-out;
 }
+*/
 
 /* Small-medium width tablets: iPad mini */
 
@@ -160,5 +163,66 @@ button:focus, button:active {
 
   .event .time {
     max-width: 40%;
+  }
+}
+
+/* Phones */
+
+@media only screen and (max-width: 767px) {
+  .event {
+    padding-right: 20px;
+  }
+
+  .event .title {
+    float: none;
+    min-width: 100%;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .event .time {
+    font-size: 19px;
+    max-width: 100%;
+    float: none;
+    text-align: justify;
+  }
+
+  .event .bottomrow {
+    padding: 5px 0;
+  }
+
+  .event .description {
+    font-size: 16px;
+    max-width: 100%;
+    position: relative;
+    display: block;
+    float: none;
+  }
+
+  .event .location {
+    font-size: 16px;
+    float: none;
+    max-width: 100%;
+    text-align: left;
+    position: relative;
+    margin-top: 5px;
+  }
+
+  .content {
+    width: 100%;
+    float: none;
+    display: inline;
+  }
+
+  .buttons {
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 100%;
+    margin-top: 0px;
+  }
+
+  .events button {
+    margin: 0 auto;
   }
 }

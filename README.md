@@ -15,11 +15,12 @@ Source code for my Hack the North frontend challenge built using React, hosted o
 * Filter events by most popular
 * Clicking on a location creates a pop-up map with directions
 * Export personal schedule to Google Calendar etc.
-* Icon to show if event is already on personal calendar or not
 * Search bar suggestions
+* Draggable cards
 
 ## Performance fixes
 
 * Binary search for personal schedule insertions
-* Faster filtering algorithm
-* Use CSS modules or anything that's easier to structure
+* Faster search filtering algorithm
+* Use CSS modules or anything with better structure
+* Optimize for mobile

@@ -1,6 +1,6 @@
 .all {
-  top: 15px;
   position: relative;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .schedule {
@@ -14,10 +14,24 @@
   display: flex;
 }
 
-/* Small Phones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-@media only screen and (max-width: 1024px) {
+
+/* Phones */
+
+@media only screen and (max-width: 767px) {
   .schedule {
     width: 100% !important;
+  }
+
+  .events {
+    max-width: 100% !important;
   }
 }

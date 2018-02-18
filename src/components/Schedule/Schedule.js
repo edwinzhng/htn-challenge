@@ -37,7 +37,7 @@ class Schedule extends Component {
     });
   }
 
-  createEvent(data, dataIndex, isPersonal, isHidden) {
+  createEvent(data, dataIndex, isPersonal, isHidden, alreadyAdded) {
     let event = <Event
       key={data.id}
       dataIndex={dataIndex}
@@ -51,6 +51,7 @@ class Schedule extends Component {
       deleteEvent={() => this.deleteEvent(data.id)}
       isPersonal={isPersonal}
       isHidden={isHidden}
+      alreadyAdded={alreadyAdded}
     />;
     return event;
   }
@@ -58,18 +59,18 @@ class Schedule extends Component {
   initEvents() {
     let events = [];
     for (let i = 0; i < this.state.data.length; i++) {
-      let event = this.createEvent(this.state.data[i], i, false, false);
+      let event = this.createEvent(this.state.data[i], i, false, false, false);
       events.push(event);
     }
     // sort events by date
     events.sort(function(a, b) {
-      let startA = new Date(a.props.start_time), startB = new Date(b.props.start_time),
-          endA = new Date(a.props.end_time), endB = new Date(a.props.end_time);
-
-      return startA > startB ? -1 :    // a larger than b if start time is later
-              startA < startB ? 1 :    // smaller if start time is earlier
-              endA > endB ? -1 :       // larger if start times equal but end time later
-              endA < endB ? 1 : 0;     // smaller if start times equal but end time earlier
+      let startA = new Date(a.props.start), startB = new Date(b.props.start),
+          endA = new Date(a.props.end), endB = new Date(b.props.end)
+      let val = startA.getTime() - startB.getTime();
+      if(val === 0) {
+        val = endA.getTime() - endB.getTime(); // check end times if start times equal
+      }
+      return val;
     });
     this.setState({
       events: events,
@@ -78,7 +79,9 @@ class Schedule extends Component {
 
   addPersonalEvent(id) {
     let newEvent = false,
+        newSavedEvent = false,
         savedEvents = this.state.savedEvents.slice(),
+        events = this.state.events.slice(),
         sortIndex = 0;
     // check if event is already saved
     for(let i = 0; i < this.state.savedEvents.length; i++) {
@@ -89,19 +92,20 @@ class Schedule extends Component {
     // find event from data
     for(let i = 0; i < this.state.data.length; i++) {
       if(this.state.data[i].id === id) {
-        newEvent = this.createEvent(this.state.data[i], i, true, false);
+        newSavedEvent = this.createEvent(this.state.data[i], i, true, false, true);
+        newEvent = this.createEvent(this.state.data[i], i, false, false, true);
         break;
       }
     }
     // find index to insert
     while(sortIndex < savedEvents.length) {
-      let startA = new Date(newEvent.props.start), startB = new Date(savedEvents[sortIndex].props.start),
-          endA = new Date(newEvent.props.end), endB = new Date(savedEvents[sortIndex].props.end);
-      if(startA > startB) {
+      let startA = new Date(newSavedEvent.props.start), startB = new Date(savedEvents[sortIndex].props.start),
+          endA = new Date(newSavedEvent.props.end), endB = new Date(savedEvents[sortIndex].props.end);
+      if(startA.getTime() > startB.getTime()) {
         sortIndex++;
       }
-      else if(startA === startB) {
-        if (endA > endB) {
+      else if(startA.getTime() === startB.getTime()) {
+        if (endA.getTime() > endB.getTime()) {
           sortIndex++;
         }
         else { break; }
@@ -109,22 +113,45 @@ class Schedule extends Component {
       else { break; }
     }
     // insert event in order
-    savedEvents.splice(sortIndex, 0, newEvent);
+    savedEvents.splice(sortIndex, 0, newSavedEvent);
+    // set event icon to checkmark
+    for(let i = 0; i < events.length; i++) {
+      if(events[i].key === String(id)) {
+        events.splice(i, 1, newEvent);
+      }
+    }
     this.setState({
       savedEvents: savedEvents,
+      events: events,
     });
     return;
   }
 
   deleteEvent(id) {
-    let savedEvents = this.state.savedEvents.slice();
+    let savedEvents = this.state.savedEvents.slice(),
+        events = this.state.events.slice(),
+        newEvent, index, isHidden;
     for(let i = 0; i < savedEvents.length; i++) {
       if(this.state.savedEvents[i].key === String(id)) {
         savedEvents.splice(i, 1);
       }
     }
+    for(let i = 0; i < events.length; i++) {
+      if(this.state.events[i].key === String(id)) {
+        index = i;
+        isHidden = this.state.events[i].props.isHidden;
+      }
+    }
+    for(let i = 0; i < this.state.data.length; i++) {
+      if(this.state.data[i].id === id) {
+        newEvent = this.createEvent(this.state.data[i], i, false, isHidden, false);
+        break;
+      }
+    }
+    events.splice(index, 1, newEvent);
     this.setState((prevState) => ({
       savedEvents: savedEvents,
+      events: events,
     }));
   }
 

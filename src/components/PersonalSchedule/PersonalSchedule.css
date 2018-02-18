@@ -30,10 +30,12 @@
   box-shadow: 0px 0px 4px 1px #16affb;
 }
 
-/* Small Phones */
+/* Phones */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 767px) {
   .personal {
+    height: 100%;
     width: 100% !important;
+    top: 5px !important;
   }
 }

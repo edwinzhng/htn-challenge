@@ -9,7 +9,7 @@ class Event extends Component {
         weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         day = weekday[start.getDay()],
         starthour = start.getHours(),
-        startmin = start.getHours(),
+        startmin = start.getMinutes(),
         endhour = end.getHours(),
         endmin = end.getMinutes();
 
@@ -57,8 +57,16 @@ class Event extends Component {
         <div className="buttons">
           <button onClick={this.props.isPersonal ? this.props.deleteEvent : this.props.addPersonalEvent}>
             { this.props.isPersonal ?
-                <Ionicon icon="md-trash" fontSize="40px" color="#ddd" className="delete"/> :
-                <Ionicon icon="md-add" fontSize="40px" color="#ddd" className="add"/>
+                <Ionicon  icon="md-trash"
+                          fontSize="50px"
+                          color="#ddd"
+                          className="delete"
+                /> :
+                <Ionicon  icon={this.props.alreadyAdded ? "md-checkmark" : "md-add"}
+                          fontSize="50px"
+                          color="#ddd"
+                          className="add"
+                />
             }
           </button>
         </div>

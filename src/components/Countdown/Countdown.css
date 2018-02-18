@@ -2,6 +2,7 @@
   margin-top: 75px;
   margin-bottom: 20px;
   text-align: center !important;
+  max-width: 100%;
 }
 
 .num {
@@ -132,6 +133,10 @@
 /* Small Phones */
 
 @media only screen and (max-width: 480px) {
+  .countdown {
+    overflow: hidden;
+  }
+
   .countdown h2 {
     font-size: 28px;
   }
@@ -142,17 +147,18 @@
 
   .countdown .middlegear {
     height: 151px;
-    top: -7px;
+    top: -22px;
     margin: auto -30px;
   }
 
   .countdown .leftgear {
-    top: 30px;
+    top: 15px;
     height: 135px;
   }
 
   .countdown .rightgear {
     height: 135px;
+    top: -15px;
   }
 
   .num {
@@ -161,16 +167,16 @@
 
   .hr {
     left: 5px;
-    top: 35px;
+    top: 20px;
   }
 
   .min {
     left: -41px;
-    top: -1px;
+    top: -16px;
   }
 
   .sec {
     left: 2px;
-    top: 5px;
+    top: -10px;
   }
 }

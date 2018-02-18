@@ -1,6 +1,6 @@
 .selector {
   position: sticky;
-  top: 70px;
+  top: 65px;
   width: 100%;
   z-index: 10;
 }
@@ -9,21 +9,30 @@
   font-family: 'Poppins';
   font-size: 17px;
   padding: 5px 5px;
-  background: #fff;
-  opacity: 0.7;
-  border: 2px solid #0097c4;
+  background: rgba(0, 181, 235, 0.2);
+  border: 2px solid rgba(0, 151, 196, 0.2);
   outline: none;
   box-shadow: none;
   width: calc(50% - 20px);
 }
 
 .selectEvents {
-  border-radius: 5px 0 0 5px;
-  border-right: 0 !important;
+  border-radius: 25px 0 0 25px;
+  border-right: 1px solid rgba(0, 151, 196, 0.2) !important;
   margin-left: 20px;
 }
 
 .selectSaved {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 25px 25px 0;
+  border-left: 1px solid rgba(0, 151, 196, 0.2) !important;
   margin-right: 20px;
+}
+
+.selector .selected {
+  background: rgba(0, 181, 235, 0.9);
+  transition: background 0.2s ease-out;
+}
+
+.selector .notSelected:hover {
+  background: rgba(0, 181, 235, 0.3);
 }
