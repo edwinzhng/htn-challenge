@@ -71,7 +71,7 @@ class Schedule extends Component {
   }
 
   initEvents() {
-    let events = [], alreadyAdded = false, arr = [], data;
+    let events = [], alreadyAdded = undefined, arr = [], data;
     for (let i = 0; i < this.state.data.length; i++) {
       data = this.state.data[i];
       arr = JSON.parse(localStorage.getItem("savedEvents"));
@@ -119,6 +119,9 @@ class Schedule extends Component {
         // update localStorage with new event
         let local = [];
         local = JSON.parse(localStorage.getItem("savedEvents"));
+        if(local == null) {
+          local = [];
+        }
         local.push(this.state.data[i]);
         localStorage.setItem("savedEvents", JSON.stringify(local));
         break;
@@ -181,10 +184,12 @@ class Schedule extends Component {
     events.splice(index, 1, newEvent);
     // delete event with id from savedEvents localStorage
     let local = JSON.parse(localStorage.getItem("savedEvents"));
-    for(let i = 0; i < local.length; i++) {
-      if(local[i].id === id) {
-        local.splice(i, 1);
-        break;
+    if(local != null) {
+      for(let i = 0; i < local.length; i++) {
+        if(local[i].id === id) {
+          local.splice(i, 1);
+          break;
+        }
       }
     }
     localStorage.setItem("savedEvents", JSON.stringify(local));
