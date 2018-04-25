@@ -1,0 +1,886 @@
+[
+    {
+        "id": 472,
+        "title": "Registration",
+        "description": null,
+        "start_time": "2018-09-15T17:30:00-04:00",
+        "end_time": "2018-09-16T02:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-09-15T04:00:59-04:00",
+        "updated_at": "2018-09-15T04:00:59-04:00"
+    },
+    {
+        "id": 182,
+        "title": "Dinner",
+        "description": "Presented by: Your Local Pub",
+        "start_time": "2018-09-15T18:00:00-04:00",
+        "end_time": "2018-09-16T00:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T02:19:07-04:00",
+        "updated_at": "2018-09-04T02:19:07-04:00"
+    },
+    {
+        "id": 438,
+        "title": "Opening Ceremonies",
+        "description": null,
+        "start_time": "2018-09-15T20:30:00-04:00",
+        "end_time": "2018-09-15T23:30:00-04:00",
+        "location": "Hagey Hall",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-09-14T17:43:13-04:00",
+        "updated_at": "2018-09-14T17:43:13-04:00"
+    },
+    {
+        "id": 141,
+        "title": "Team Building",
+        "description": "An opportunity to meet other hackers, brainstorm and pitch your ideas, and find a team for Hack the North.",
+        "start_time": "2018-09-15T23:45:00-04:00",
+        "end_time": "2018-09-16T01:00:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-02T17:36:08-04:00",
+        "updated_at": "2018-09-02T17:36:08-04:00"
+    },
+    {
+        "id": 228,
+        "title": "Getting Started With The Wowzers API ",
+        "description": "Presented by: WowzMe",
+        "start_time": "2018-09-16T00:00:00-04:00",
+        "end_time": "2018-09-16T00:30:00-04:00",
+        "location": "DC 1301",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-05T03:03:58-04:00",
+        "updated_at": "2018-09-05T03:03:58-04:00"
+    },
+    {
+        "id": 101,
+        "title": "Hacking Begins",
+        "description": null,
+        "start_time": "2018-09-16T00:00:00-04:00",
+        "end_time": "2018-09-16T00:00:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-08-29T19:41:56-04:00",
+        "updated_at": "2018-08-29T19:41:56-04:00"
+    },
+    {
+        "id": 371,
+        "title": "Making Mobile Apps With React-Native",
+        "description": "Presented by: Expo",
+        "start_time": "2018-09-16T00:00:00-04:00",
+        "end_time": "2018-09-16T00:45:00-04:00",
+        "location": "DC 1351",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-11T20:25:35-04:00",
+        "updated_at": "2018-09-11T20:25:35-04:00"
+    },
+    {
+        "id": 190,
+        "title": "Hardware Booth Open",
+        "description": "1st Floor of E5",
+        "start_time": "2018-09-16T00:00:00-04:00",
+        "end_time": "2018-09-16T03:30:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-09-04T20:05:23-04:00",
+        "updated_at": "2018-09-04T20:05:23-04:00"
+    },
+    {
+        "id": 202,
+        "title": "Getting Started With The Ultimate Data API",
+        "description": "Presented by: Data Corp",
+        "start_time": "2018-09-16T00:00:00-04:00",
+        "end_time": "2018-09-16T00:30:00-04:00",
+        "location": "DC 1302",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-04T22:37:22-04:00",
+        "updated_at": "2018-09-04T22:37:22-04:00"
+    },
+    {
+        "id": 226,
+        "title": "API 101",
+        "description": "An introductory workshop on learning how to use APIs.",
+        "start_time": "2018-09-16T00:00:00-04:00",
+        "end_time": "2018-09-16T01:00:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-05T01:55:51-04:00",
+        "updated_at": "2018-09-05T01:55:51-04:00"
+    },
+    {
+        "id": 147,
+        "title": "Game Dev 1",
+        "description": "Learn how to program in C# and make games in Unity!",
+        "start_time": "2018-09-16T00:30:00-04:00",
+        "end_time": "2018-09-16T01:30:00-04:00",
+        "location": "DC 1302",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-02T18:12:08-04:00",
+        "updated_at": "2018-09-02T18:12:08-04:00"
+    },
+    {
+        "id": 158,
+        "title": "iOS",
+        "description": "Learn the fundamentals of creating iOS apps using Swift.",
+        "start_time": "2018-09-16T00:30:00-04:00",
+        "end_time": "2018-09-16T01:30:00-04:00",
+        "location": "DC 1301",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-03T01:25:36-04:00",
+        "updated_at": "2018-09-03T01:25:36-04:00"
+    },
+    {
+        "id": 333,
+        "title": "Android 1 ",
+        "description": "Get acquainted with Android development and make the first steps to creating an Android app.",
+        "start_time": "2018-09-16T00:45:00-04:00",
+        "end_time": "2018-09-16T01:45:00-04:00",
+        "location": "DC 1351",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-09T06:57:50-04:00",
+        "updated_at": "2018-09-09T06:57:50-04:00"
+    },
+    {
+        "id": 216,
+        "title": "Web Dev 1",
+        "description": "Web Dev I will cover the fundamental concepts of the web and teach you how to create a basic webpage using HTML, CSS, and JavaScript.",
+        "start_time": "2018-09-16T01:15:00-04:00",
+        "end_time": "2018-09-16T02:15:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-05T00:23:10-04:00",
+        "updated_at": "2018-09-05T00:23:10-04:00"
+    },
+    {
+        "id": 227,
+        "title": "Getting Started With The Crypto API ",
+        "description": "Presented by: Crypto Inc",
+        "start_time": "2018-09-16T01:15:00-04:00",
+        "end_time": "2018-09-16T01:45:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-05T03:02:37-04:00",
+        "updated_at": "2018-09-05T03:02:37-04:00"
+    },
+    {
+        "id": 214,
+        "title": "Poutine Bar",
+        "description": "Presented by: The Poutine Company",
+        "start_time": "2018-09-16T01:30:00-04:00",
+        "end_time": "2018-09-16T03:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T23:03:51-04:00",
+        "updated_at": "2018-09-04T23:03:51-04:00"
+    },
+    {
+        "id": 328,
+        "title": "Getting Started With SQL",
+        "description": "Presented by: The Query Corporation",
+        "start_time": "2018-09-16T01:30:00-04:00",
+        "end_time": "2018-09-16T02:00:00-04:00",
+        "location": "DC 1301",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-09T05:47:20-04:00",
+        "updated_at": "2018-09-09T05:47:20-04:00"
+    },
+    {
+        "id": 148,
+        "title": "Game Dev 2",
+        "description": "Get ideas and advice on building a game at a hackathon!",
+        "start_time": "2018-09-16T01:45:00-04:00",
+        "end_time": "2018-09-16T02:45:00-04:00",
+        "location": "DC 1302",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-02T18:14:54-04:00",
+        "updated_at": "2018-09-02T18:14:54-04:00"
+    },
+    {
+        "id": 205,
+        "title": "Getting Started With Drone Delivery API",
+        "description": "Presented by: RealFast",
+        "start_time": "2018-09-16T01:45:00-04:00",
+        "end_time": "2018-09-16T02:30:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-04T22:39:49-04:00",
+        "updated_at": "2018-09-04T22:39:49-04:00"
+    },
+    {
+        "id": 335,
+        "title": "Design/UX ",
+        "description": "Understand the value of user interface design and create your first mockups!",
+        "start_time": "2018-09-16T02:00:00-04:00",
+        "end_time": "2018-09-16T03:00:00-04:00",
+        "location": "DC 1301",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-09T07:08:21-04:00",
+        "updated_at": "2018-09-09T07:08:21-04:00"
+    },
+    {
+        "id": 334,
+        "title": "Android 2 ",
+        "description": "Further finesse your Android skills with more advanced Android concepts and knowledge.",
+        "start_time": "2018-09-16T02:00:00-04:00",
+        "end_time": "2018-09-16T03:00:00-04:00",
+        "location": "DC 1351",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-09T06:58:40-04:00",
+        "updated_at": "2018-09-09T06:58:40-04:00"
+    },
+    {
+        "id": 225,
+        "title": "Web Dev 2 (Backend)",
+        "description": "This workshop will cover everything needed to create and deploy a Node.js back-end service on GCP/AWS, focusing on REST & micro-service architecture.",
+        "start_time": "2018-09-16T02:30:00-04:00",
+        "end_time": "2018-09-16T03:30:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-05T01:53:49-04:00",
+        "updated_at": "2018-09-05T01:53:49-04:00"
+    },
+    {
+        "id": 206,
+        "title": "Getting Started With The Machine Learning API ",
+        "description": "Presented by: ML Extravaganza",
+        "start_time": "2018-09-16T02:30:00-04:00",
+        "end_time": "2018-09-16T03:15:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-04T22:40:29-04:00",
+        "updated_at": "2018-09-05T01:09:48-04:00"
+    },
+    {
+        "id": 337,
+        "title": "Getting Started With Computer Vision",
+        "description": "Presented by: ISEEEVERYTHING",
+        "start_time": "2018-09-16T03:00:00-04:00",
+        "end_time": "2018-09-16T03:45:00-04:00",
+        "location": "DC 1302",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-09T15:20:13-04:00",
+        "updated_at": "2018-09-09T15:20:13-04:00"
+    },
+    {
+        "id": 336,
+        "title": "Virtual Reality",
+        "description": "Learn essentials for creating VR applications - 3D Graphics, interfaces, and more!",
+        "start_time": "2018-09-16T03:15:00-04:00",
+        "end_time": "2018-09-16T04:15:00-04:00",
+        "location": "DC 1301",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-09T07:10:13-04:00",
+        "updated_at": "2018-09-09T07:10:13-04:00"
+    },
+    {
+        "id": 208,
+        "title": "Getting Started With The NOAPI API",
+        "description": "Presented by: NaN Inc",
+        "start_time": "2018-09-16T03:15:00-04:00",
+        "end_time": "2018-09-16T04:15:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-04T22:41:45-04:00",
+        "updated_at": "2018-09-04T22:41:45-04:00"
+    },
+    {
+        "id": 143,
+        "title": "Web Dev 2 (Frontend)",
+        "description": "Use VueJS, a modern frontend framework, to create a Reddit web client.",
+        "start_time": "2018-09-16T03:45:00-04:00",
+        "end_time": "2018-09-16T04:45:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-02T18:06:56-04:00",
+        "updated_at": "2018-09-02T18:06:56-04:00"
+    },
+    {
+        "id": 210,
+        "title": "Spicy Noodle UI Challenge",
+        "description": null,
+        "start_time": "2018-09-16T04:00:00-04:00",
+        "end_time": "2018-09-16T05:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-04T22:50:42-04:00",
+        "updated_at": "2018-09-04T22:50:42-04:00"
+    },
+    {
+        "id": 183,
+        "title": "Breakfast",
+        "description": "Presented by: Your Local Pub",
+        "start_time": "2018-09-16T07:00:00-04:00",
+        "end_time": "2018-09-16T10:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T02:20:29-04:00",
+        "updated_at": "2018-09-04T02:20:29-04:00"
+    },
+    {
+        "id": 219,
+        "title": "Morning Yoga",
+        "description": null,
+        "start_time": "2018-09-16T08:00:00-04:00",
+        "end_time": "2018-09-16T09:00:00-04:00",
+        "location": "DC 1800",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-05T01:16:32-04:00",
+        "updated_at": "2018-09-05T01:16:32-04:00"
+    },
+    {
+        "id": 233,
+        "title": "Bloomberg Lightning Challenge",
+        "description": null,
+        "start_time": "2018-09-16T08:30:00-04:00",
+        "end_time": "2018-09-16T08:50:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-05T03:25:22-04:00",
+        "updated_at": "2018-09-05T03:25:22-04:00"
+    },
+    {
+        "id": 262,
+        "title": "How To Organize a Winning Hackathon",
+        "description": "Presented by: Hack the North",
+        "start_time": "2018-09-16T09:30:00-04:00",
+        "end_time": "2018-09-16T10:05:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "talk"
+        ],
+        "created_at": "2018-09-05T17:13:04-04:00",
+        "updated_at": "2018-09-05T17:13:04-04:00"
+    },
+    {
+        "id": 234,
+        "title": "AI Lightning Challenge",
+        "description": null,
+        "start_time": "2018-09-16T10:30:00-04:00",
+        "end_time": "2018-09-16T10:50:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-05T03:26:12-04:00",
+        "updated_at": "2018-09-05T03:26:12-04:00"
+    },
+    {
+        "id": 212,
+        "title": "Virtual Reality Room",
+        "description": null,
+        "start_time": "2018-09-16T11:00:00-04:00",
+        "end_time": "2018-09-16T15:30:00-04:00",
+        "location": "DC 1301",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-04T22:55:09-04:00",
+        "updated_at": "2018-09-04T22:55:09-04:00"
+    },
+    {
+        "id": 129,
+        "title": "Cryptocurrency Panel",
+        "description": "Hagey Hall 159",
+        "start_time": "2018-09-16T11:00:00-04:00",
+        "end_time": "2018-09-16T12:30:00-04:00",
+        "location": "Hagey Hall",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-08-29T20:24:52-04:00",
+        "updated_at": "2018-08-29T20:24:52-04:00"
+    },
+    {
+        "id": 188,
+        "title": "Smart Load Balancing With Nginx: Scaling Your Application For Flash Sales And Protecting It From DDoS Attacks ",
+        "description": "Presented by: John Doe",
+        "start_time": "2018-09-16T11:30:00-04:00",
+        "end_time": "2018-09-16T12:15:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "talk"
+        ],
+        "created_at": "2018-09-04T14:06:47-04:00",
+        "updated_at": "2018-09-04T14:06:47-04:00"
+    },
+    {
+        "id": 184,
+        "title": "Lunch",
+        "description": "Presented by: Food Is Good",
+        "start_time": "2018-09-16T12:00:00-04:00",
+        "end_time": "2018-09-16T14:30:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T02:21:15-04:00",
+        "updated_at": "2018-09-04T02:21:15-04:00"
+    },
+    {
+        "id": 264,
+        "title": "Crypto Investing Lightning Challenge",
+        "description": null,
+        "start_time": "2018-09-16T12:45:00-04:00",
+        "end_time": "2018-09-16T13:05:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-05T17:15:46-04:00",
+        "updated_at": "2018-09-05T17:15:46-04:00"
+    },
+    {
+        "id": 298,
+        "title": "International Hackers Meetup",
+        "description": "https://www.facebook.com/events/1956287401251887/",
+        "start_time": "2018-09-16T13:00:00-04:00",
+        "end_time": "2018-09-16T14:00:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "meetup"
+        ],
+        "created_at": "2018-09-08T07:10:22-04:00",
+        "updated_at": "2018-09-08T07:10:22-04:00"
+    },
+    {
+        "id": 300,
+        "title": "High School Hackers Meetup",
+        "description": "https://www.facebook.com/events/1981916612096535/",
+        "start_time": "2018-09-16T13:00:00-04:00",
+        "end_time": "2018-09-16T14:00:00-04:00",
+        "location": "DC 1351",
+        "tags": [
+            "meetup"
+        ],
+        "created_at": "2018-09-08T08:52:49-04:00",
+        "updated_at": "2018-09-08T08:52:49-04:00"
+    },
+    {
+        "id": 299,
+        "title": "Game Developers Meetup",
+        "description": "https://www.facebook.com/events/225518497976978/",
+        "start_time": "2018-09-16T13:00:00-04:00",
+        "end_time": "2018-09-16T14:00:00-04:00",
+        "location": "DC 1800",
+        "tags": [
+            "meetup"
+        ],
+        "created_at": "2018-09-08T08:52:04-04:00",
+        "updated_at": "2018-09-08T08:52:04-04:00"
+    },
+    {
+        "id": 189,
+        "title": "Easy Recipes To Build Smart Apps Using Machine Learning, Deep Learning, And Big Data",
+        "description": "Presented by: Jane Doe",
+        "start_time": "2018-09-16T13:30:00-04:00",
+        "end_time": "2018-09-16T14:15:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "talk"
+        ],
+        "created_at": "2018-09-04T14:12:00-04:00",
+        "updated_at": "2018-09-04T14:12:00-04:00"
+    },
+    {
+        "id": 306,
+        "title": "Data Hackers Meetup",
+        "description": "https://www.facebook.com/events/273223066514299/",
+        "start_time": "2018-09-16T14:00:00-04:00",
+        "end_time": "2018-09-16T15:00:00-04:00",
+        "location": "DC 1800",
+        "tags": [
+            "meetup"
+        ],
+        "created_at": "2018-09-09T00:14:47-04:00",
+        "updated_at": "2018-09-09T00:14:47-04:00"
+    },
+    {
+        "id": 302,
+        "title": "Hackathon Organizers Meetup",
+        "description": "https://www.facebook.com/events/104595610282628/",
+        "start_time": "2018-09-16T14:00:00-04:00",
+        "end_time": "2018-09-16T15:00:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "meetup"
+        ],
+        "created_at": "2018-09-08T08:54:37-04:00",
+        "updated_at": "2018-09-08T08:54:37-04:00"
+    },
+    {
+        "id": 236,
+        "title": "Innovative Lightning Challenge",
+        "description": null,
+        "start_time": "2018-09-16T14:45:00-04:00",
+        "end_time": "2018-09-16T15:05:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-05T03:27:59-04:00",
+        "updated_at": "2018-09-05T03:27:59-04:00"
+    },
+    {
+        "id": 303,
+        "title": "Designers Meetup",
+        "description": "https://www.facebook.com/events/286117078532983/",
+        "start_time": "2018-09-16T15:00:00-04:00",
+        "end_time": "2018-09-16T16:00:00-04:00",
+        "location": "DC 1351",
+        "tags": [
+            "meetup"
+        ],
+        "created_at": "2018-09-08T08:55:20-04:00",
+        "updated_at": "2018-09-08T08:55:20-04:00"
+    },
+    {
+        "id": 261,
+        "title": "Diversity & Inclusion Panel",
+        "description": "Join us in discussing, celebrating, and raising awareness about diversity and inclusion at a live Q&A panel. Meet like-minded individuals while learning from inspirational leaders who have faced the challenges of being a minority in the tech industry and paved their own paths forward.",
+        "start_time": "2018-09-16T15:00:00-04:00",
+        "end_time": "2018-09-16T16:30:00-04:00",
+        "location": "Hagey Hall",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-09-05T07:00:37-04:00",
+        "updated_at": "2018-09-05T07:00:37-04:00"
+    },
+    {
+        "id": 177,
+        "title": "Sweets",
+        "description": "Presented by: Yummy Food",
+        "start_time": "2018-09-16T15:00:00-04:00",
+        "end_time": "2018-09-16T16:30:00-04:00",
+        "location": "Parking Lot",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T01:59:33-04:00",
+        "updated_at": "2018-09-04T01:59:33-04:00"
+    },
+    {
+        "id": 263,
+        "title": "Wave Of The Future: Hello Quantum World ",
+        "description": "Presented by: Hacker George",
+        "start_time": "2018-09-16T15:30:00-04:00",
+        "end_time": "2018-09-16T16:10:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "talk"
+        ],
+        "created_at": "2018-09-05T17:14:16-04:00",
+        "updated_at": "2018-09-05T17:14:16-04:00"
+    },
+    {
+        "id": 237,
+        "title": "Trust Lightning Challenge",
+        "description": null,
+        "start_time": "2018-09-16T16:30:00-04:00",
+        "end_time": "2018-09-16T16:50:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-05T03:29:05-04:00",
+        "updated_at": "2018-09-05T03:29:05-04:00"
+    },
+    {
+        "id": 304,
+        "title": "Ladies Storm Hackathons Meetup",
+        "description": "https://www.facebook.com/events/354303488315923/",
+        "start_time": "2018-09-16T16:30:00-04:00",
+        "end_time": "2018-09-16T17:30:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "meetup"
+        ],
+        "created_at": "2018-09-08T08:56:45-04:00",
+        "updated_at": "2018-09-08T08:56:45-04:00"
+    },
+    {
+        "id": 185,
+        "title": "Dinner",
+        "description": "Presented by: Your Local Pub",
+        "start_time": "2018-09-16T18:00:00-04:00",
+        "end_time": "2018-09-16T21:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T02:21:50-04:00",
+        "updated_at": "2018-09-04T02:21:50-04:00"
+    },
+    {
+        "id": 331,
+        "title": "Data Science ",
+        "description": "Learn the most effective tools in R for becoming a productive data scientist.",
+        "start_time": "2018-09-16T19:00:00-04:00",
+        "end_time": "2018-09-16T20:00:00-04:00",
+        "location": "DC 1351",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-09T05:53:49-04:00",
+        "updated_at": "2018-09-09T05:53:49-04:00"
+    },
+    {
+        "id": 437,
+        "title": "Technology For Social Good",
+        "description": "Learn about how technology can be used to further social good causes and how to get involved.",
+        "start_time": "2018-09-16T20:00:00-04:00",
+        "end_time": "2018-09-16T21:00:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-14T00:33:40-04:00",
+        "updated_at": "2018-09-14T00:33:40-04:00"
+    },
+    {
+        "id": 191,
+        "title": "Cup Stacking ",
+        "description": "Presented by: The Cup Stackers",
+        "start_time": "2018-09-16T21:00:00-04:00",
+        "end_time": "2018-09-16T22:00:00-04:00",
+        "location": "DC 1800",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-04T21:17:15-04:00",
+        "updated_at": "2018-09-04T21:17:15-04:00"
+    },
+    {
+        "id": 153,
+        "title": "Security",
+        "description": "Who are Alice and Bob? What is RSA? Come find out!",
+        "start_time": "2018-09-16T21:00:00-04:00",
+        "end_time": "2018-09-16T22:00:00-04:00",
+        "location": "DC 1351",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-02T18:41:38-04:00",
+        "updated_at": "2018-09-02T18:41:38-04:00"
+    },
+    {
+        "id": 473,
+        "title": "Bubble Tea",
+        "description": "Presented By: All Your Boba Belong To Us",
+        "start_time": "2018-09-16T22:00:00-04:00",
+        "end_time": "2018-09-16T23:30:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-15T15:54:00-04:00",
+        "updated_at": "2018-09-15T15:54:00-04:00"
+    },
+    {
+        "id": 154,
+        "title": "Mental Health",
+        "description": "Mental Health affects us all, so let\u2019s talk about it! This workshop will be covering burnout, imposter syndrome, self-care, and how to be an effective peer supporter. ",
+        "start_time": "2018-09-16T22:00:00-04:00",
+        "end_time": "2018-09-16T23:00:00-04:00",
+        "location": "DC 1350",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-02T18:43:13-04:00",
+        "updated_at": "2018-09-05T01:10:39-04:00"
+    },
+    {
+        "id": 213,
+        "title": "Late Night Karaoke",
+        "description": null,
+        "start_time": "2018-09-16T22:00:00-04:00",
+        "end_time": "2018-09-16T23:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "lightning_challenge"
+        ],
+        "created_at": "2018-09-04T22:56:30-04:00",
+        "updated_at": "2018-09-04T22:56:30-04:00"
+    },
+    {
+        "id": 404,
+        "title": "Pitching",
+        "description": "Don't waste your 36 hours of hacking with a bad 2.5 minute pitch!",
+        "start_time": "2018-09-16T23:00:00-04:00",
+        "end_time": "2018-09-17T00:00:00-04:00",
+        "location": "DC 1351",
+        "tags": [
+            "workshop"
+        ],
+        "created_at": "2018-09-12T23:45:45-04:00",
+        "updated_at": "2018-09-12T23:45:45-04:00"
+    },
+    {
+        "id": 197,
+        "title": "Pierogies",
+        "description": "Presented by: House of Wheat",
+        "start_time": "2018-09-17T00:30:00-04:00",
+        "end_time": "2018-09-17T02:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T21:34:53-04:00",
+        "updated_at": "2018-09-04T21:34:53-04:00"
+    },
+    {
+        "id": 296,
+        "title": "Ice Cream",
+        "description": "Presented by: Frozen Teeth",
+        "start_time": "2018-09-17T03:00:00-04:00",
+        "end_time": "2018-09-17T04:30:00-04:00",
+        "location": "Parking Lot",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-07T00:45:58-04:00",
+        "updated_at": "2018-09-07T00:45:58-04:00"
+    },
+    {
+        "id": 186,
+        "title": "Breakfast",
+        "description": "Presented by: Your Local Pub",
+        "start_time": "2018-09-17T07:00:00-04:00",
+        "end_time": "2018-09-17T10:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T02:25:03-04:00",
+        "updated_at": "2018-09-04T02:25:03-04:00"
+    },
+    {
+        "id": 201,
+        "title": "Project Submission Deadline",
+        "description": null,
+        "start_time": "2018-09-17T09:00:00-04:00",
+        "end_time": "2018-09-17T09:00:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-09-04T22:09:49-04:00",
+        "updated_at": "2018-09-04T22:09:49-04:00"
+    },
+    {
+        "id": 113,
+        "title": "Judging",
+        "description": null,
+        "start_time": "2018-09-17T09:30:00-04:00",
+        "end_time": "2018-09-17T13:00:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "judging"
+        ],
+        "created_at": "2018-08-29T20:03:40-04:00",
+        "updated_at": "2018-08-29T20:03:40-04:00"
+    },
+    {
+        "id": 187,
+        "title": "Lunch",
+        "description": "Presented by: The Best Food",
+        "start_time": "2018-09-17T11:00:00-04:00",
+        "end_time": "2018-09-17T14:00:00-04:00",
+        "location": "The Tent",
+        "tags": [
+            "food"
+        ],
+        "created_at": "2018-09-04T02:29:30-04:00",
+        "updated_at": "2018-09-04T02:29:30-04:00"
+    },
+    {
+        "id": 114,
+        "title": "Hardware Return",
+        "description": "1st floor of E5",
+        "start_time": "2018-09-17T12:30:00-04:00",
+        "end_time": "2018-09-17T16:30:00-04:00",
+        "location": "Engineering 5",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-08-29T20:04:37-04:00",
+        "updated_at": "2018-08-29T20:04:37-04:00"
+    },
+    {
+        "id": 115,
+        "title": "Closing Ceremonies and Final Showcase",
+        "description": null,
+        "start_time": "2018-09-17T14:00:00-04:00",
+        "end_time": "2018-09-17T16:00:00-04:00",
+        "location": "Hagey Hall",
+        "tags": [
+            "logistics"
+        ],
+        "created_at": "2018-08-29T20:06:14-04:00",
+        "updated_at": "2018-08-29T20:06:14-04:00"
+    }
+]

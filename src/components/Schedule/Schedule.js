@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import mobile from 'is-mobile';
-import axios from 'axios';
 import Event from '../Event/Event.js'
 import Search from '../Search/Search.js'
 import PersonalSchedule from '../PersonalSchedule/PersonalSchedule.js'
 import ScheduleSelector from '../ScheduleSelector/ScheduleSelector.js'
+import dataFile from '../../data/fe-schedule.json'
 import './Schedule.css';
 
 class Schedule extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: false,
+      data: dataFile,
       events: [],
       savedEvents: [],
       isSavedScheduleView: false,
@@ -23,7 +23,7 @@ class Schedule extends Component {
   }
 
   componentDidMount() {
-    // get JSON file
+    /*
     axios.get('https://hackthenorth.com/fe-schedule.json')
       .then(response => {
         this.setState({ data: response.data });
@@ -33,9 +33,11 @@ class Schedule extends Component {
         console.log(error);
       }
     );
+    */
     this.setState({
       isMobile: mobile(),
     });
+    this.initEvents();
     // render saved events if they already exist
     let local = JSON.parse(localStorage.getItem("savedEvents")),
         savedEvents = [];
